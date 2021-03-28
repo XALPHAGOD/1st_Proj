@@ -37,7 +37,7 @@ const getInfo= async (event)=>{
             temp.innerText= `${arrData[0].main.temp} °C`;       //alt + 0176 for degree symbol
 
             let mode= arrData[0].weather[0].main;
-
+            // alert(mode);
             if(mode=="Clear"){
                 weatherStat.innerHTML= `<i class="fas fa-sun fa-2x" style="color: rgb(255, 251, 0);"></i>`;
             }
@@ -46,6 +46,9 @@ const getInfo= async (event)=>{
             }
             else if(mode=="Rain"){
                 weatherStat.innerHTML= `<i class="fas fa-cloud-showers-heavy fa-2x" style="color: rgb(0, 10, 100);"></i>`;
+            }
+            else if(mode== "Haze"){
+                weatherStat.innerHTML= `<i class="fas fa-smog fa-2x" style="color: rgb(125, 124, 110);"></i>`;
             }
             else{
                 weatherStat.innerHTML= `<i class="far fa-snowflake fa-2x" style="color: #0097e6;"></i>`;
